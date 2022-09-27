@@ -82,8 +82,20 @@ body {
   margin-right: 10px;
 }
 
-.site-nav .link.current {
+.link.current {
+  position: relative;
   color: var(--accent-text-color);
+}
+
+.current::after {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  content: '';
+  width: 100%;
+  background-color: var(--accent-text-color);
+  height: 4px;
+  border-radius: 2px;
 }
 
 .link .icon {
